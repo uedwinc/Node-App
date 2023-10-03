@@ -128,6 +128,7 @@ mongo-express
     - "node-mongo.yaml" is the name I gave my docker compose file.
 
 ![compose](link)
+![compose db](link)
 
 5. On the web browser, we can access our database. Create a "database name" and "collection name".
 
