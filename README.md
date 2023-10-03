@@ -99,7 +99,7 @@ mongo-express
 
 2. We need to create a Dockerfile for our application
 
-3. Next, we build the image (tagged "nodeapp"1.1") from our Dockerfile
+3. Next, we build the image (tagged "nodeapp:1.1") from our Dockerfile
 
     docker build -t nodeapp:1.1 .
 
@@ -125,7 +125,7 @@ mongo-express
 
     docker compose -f node-mongo.yaml up -d
 
- > "node-mongo.yaml" is the name I gave my docker compose file.
+    - "node-mongo.yaml" is the name I gave my docker compose file.
 
 ![compose](link)
 
