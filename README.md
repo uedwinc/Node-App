@@ -14,7 +14,7 @@ All components are docker-based
 
 ### Tools and Packages
 
-![linux][linux] ![aws][aws] ![git][git] ![docker][docker] ![nodejs][nodejs] ![mongo][mongodb] ![sonatype][sonatype]
+![linux][linux]  ![aws][aws]  ![git][git]  ![docker][docker]  ![nodejs][nodejs]  ![mongo][mongodb]  ![sonatype][sonatype]
 
 [linux]: <https://img.shields.io/badge/linux-FCC624?style=for-the-badge&labelColor=black&logo=linux&logoColor=FCC624>
 [aws]: <https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&labelColor=black&logo=amazonaws&logoColor=232F3E>
@@ -67,16 +67,17 @@ docker run -d \
 mongo-express
 ```
 
-![mongo ps](link)
+![mongo ps](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/mongo%20ps.png)
 
 - Now, access the mongo ui on the browser using ip address and port
 
-![mongo ui](link)
+![mongo ui](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/mongo%20ui.png)
 
 - Create a database called 'user-account', and a table/collection called 'users'
 
-![user-account](link)
-![users](link)
+![user-account](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/user-account.png)
+
+![users](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/users.png)
 
 
 ### Starting the NodeJS Application Locally
@@ -93,21 +94,21 @@ mongo-express
 
 5. Now, run ```node server.js``` to start the application
 
-![node listen](link)
+![node listen](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/node%20lsiten.png)
 
 - Make sure to open port 3000 up in the security group
 
 6. Access the webpage on the ip address and the listening port (3000)
     
-![page](link)
+![page](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/page.png)
 
 7. Let's edit the profile page
 
-![profile edit](link)
+![profile edit](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/profile%20edit.png)
 
 - We can see this reflect on the database
 
-![info mongo](link)
+![info mongo](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/info%20mongo.png)
 
 ---
 
@@ -123,7 +124,7 @@ mongo-express
     docker build -t nodeapp:1.1 .
     ```
 
-![dk images](link)
+![dk images](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/dk%20images.png)
 
 3. Now, let's create a docker compose file as "yaml"
 
@@ -142,7 +143,7 @@ mongo-express
 
 - To know the default volume space on the container, use `docker inspect mongodb`
 
-![volume loc cont](link)
+![volume loc cont](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/volume%20loc%20cont.png)
 
 - The volume space on the container is /data/db
 
@@ -155,31 +156,29 @@ mongo-express
 
     - "node-mongo.yaml" is the name I gave my docker compose file.
 
-![compose](link)
-
-![compose db](link)
+![compose](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/compose.png)
 
 5. On the web browser, we can access our database. Create a "database name" and "collection name".
 
-![compose db](link)
+![compose db](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/compose%20db.png)
 
 6. Application listening on port 3000
 
-![nodeapp](link)
+![nodeapp](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/nodeapp.png)
 
 7. Application connected to database
 
-![edit nodeapp](link)
+![edit nodeapp](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/edit%20nodeapp.png)
 
-![nodeapp db](link)
+![nodeapp db](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/nodeapp%20db.png)
 
 8. Application volume space
 
-![volume space](link)
+![volume space](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/volume%20space.png)
 
-![volume inspect](link)
+![volume inspect](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/volume%20inspect.png)
 
-![volume mounts](link)
+![volume mounts](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/volume%20mounts.png)
 
 ---
 
@@ -187,19 +186,19 @@ mongo-express
 
 1. Go to aws and create an ECR repository. Make sure it has same name as the name of the image to be pushed into it.
 
-![ecr](link)
+![ecr](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/ecr.png)
 
 - Note that you need to have installed "aws cli" and configured with access and secret key inorder to push to ECR.
 
 2. After creating your repository on ECR, use the "view push commands" option to see steps on how to push to ECR
 
-![push commands](link)
+![push commands](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/push%20commands.png)
 
 - Skip step 2 as we already have a built image
 
 - Now tag following next instruction (use your own image tag)
 
-![dk tag](link)
+![dk tag](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/dk%20tag.png)
 
 - Now push
 
@@ -207,13 +206,13 @@ mongo-express
 docker push name-of-ecr-repository-image:tag
 ```
 
-![dk push1](link)
+![dk push1](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/dk%20push1.png)
 
-![dk push2](link)
+![dk push2](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/dk%20push2.png)
 
 - Result of ECR scan
 
-![scan results](link)
+![scan results](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/scan%20results.png)
 
 3. We can copy the URI of this image as it is a copy of the original image and use it to push into other repositories or start our application from this image.
 
@@ -231,7 +230,7 @@ docker push name-of-ecr-repository-image:tag
 docker tag nodeapp:dev uedwinc/nodeapp:dev
 ```
 
-![tagged](link)
+![tagged](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/tagged.png)
 
 4. Push to Dockerhub
 
@@ -239,9 +238,9 @@ docker tag nodeapp:dev uedwinc/nodeapp:dev
 docker push uedwinc/nodeapp:dev
 ```
 
-![dk pushed1](link)
+![dk pushed1](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/dk%20pushed1.png)
 
-![dk pushed2](link)
+![dk pushed2](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/dk%20pushed2.png)
 
 ---
 
@@ -261,31 +260,31 @@ docker push uedwinc/nodeapp:dev
 /bin/nexus start
 ```
 
-![start nexus](link)
+![start nexus](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/start%20nexus.png)
 
 6. Sign into nexus using admin username and password
 
-![sign in](link)
+![sign in](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/sign%20in.png)
 
 7. Next, create a docker(hosted) repository on nexus web console.
 
-![docker hosted]()
+![docker hosted](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/docker%20hosted.png)
 
 8. Create a user role with 'nx-repository-view-docker...*' privileges
 
-![role]()
+![role](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/role.png)
 
 9. Create a user and attach this role to the user
 
-![user]()
+![user](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/user.png)
 
 - Map a port, say 8083, to the docker(hosted) repository on nexus
 
-![map]()
+![map](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/map.png)
 
 - Go to "Realms" on the nexus web console and configure access tokens by adding the "Docker Bearer Token Realm" to "Active"
 
-![realms]()
+![realms](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/realms.png)
 
 10. On the docker server, we need to authenticate with nexus repository
 
@@ -293,7 +292,7 @@ docker push uedwinc/nodeapp:dev
 
 We can follow the instructions here to deploy plain http (https://docs.docker.com/registry/insecure/#deploy-a-plain-http-registry)
 
-![insecure]()
+![insecure](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/insecure.png)
 
 - Restart docker service
 
@@ -319,9 +318,9 @@ docker tag nodeapp:dev 13.58.249.65:8083/nodeapp:dev
 docker push 13.58.249.65:8083/nodeapp:dev
 ```
 
-![push1]()
+![push1](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/push1.png)
 
-![push2]()
+![push2](https://github.com/uedwinc/NodeApp-with-Docker/blob/main/images/push2.png)
 
 ---
 
