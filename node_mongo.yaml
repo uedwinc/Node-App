@@ -35,7 +35,7 @@ services:
     container_name: mongo-express  # Container name
     restart: always  # Always restart the container if it stops
     ports:
-      - 8081:8081  # Map port 8081 of the container to port 8081 on the host machine
+      - 8082:8081  # Map port 8081 of the container to port 8081 on the host machine
     environment:
       - ME_CONFIG_MONGODB_ADMINUSERNAME=admin  # Set Mongo Express admin username
       - ME_CONFIG_MONGODB_ADMINPASSWORD=password  # Set Mongo Express admin password
